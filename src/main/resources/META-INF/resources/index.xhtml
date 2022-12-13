@@ -12,6 +12,30 @@
     <h:body>
 		
 		test <h:outputText value="#{sessionManager.hello()}"/>
+		
+		<br/>
+		<br/>
+		
+		<h:form>
+		
+			<h:commandLink value="1 Invalidate Session manually (in request scoped bean)" action="#{sessionInvalidator.invalidateSession()}"/>
+			
+				<br/>
+				<br/>
+			
+			<h:commandLink value="2 Invalidate Session manually (in session scoped bean)" action="#{sessionManager.invalidateSession()}"/>
+			
+				<br/>
+				<br/>
+			
+			<h:commandLink value="3 Invalidate Session manually (in other session scoped bean)" action="#{mySessionBean.invalidateSession()}"/>
+			
+				<br/>
+				<br/>
+			
+			<h:commandLink value="4 Invalidate Session manually (in application scoped bean)" action="#{sessionApplicationInvalidator.invalidateSession()}"/>
+			
+		</h:form>
     
     </h:body>
     
